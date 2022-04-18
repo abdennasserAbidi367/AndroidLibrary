@@ -69,14 +69,13 @@ dependencies {
 }
 
 afterEvaluate {
-    println("Components: " + components.release_apk)
     publishing {
         publications {
             release(MavenPublication) {
                 from components.release_apk
 
-                groupId = 'com.github.philipplackner'
-                artifactId = 'image-preview-compose'
+                groupId = 'com.github.abdennasserAbidi367'
+                artifactId = 'AndroidLibrary'
                 version = '1.0'
             }
         }
