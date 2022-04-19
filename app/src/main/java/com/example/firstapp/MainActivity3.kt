@@ -22,7 +22,8 @@ class MainActivity3 : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting2("Android")
+                    //ImagePreview()
+                    //Greeting2("Android")
                     //ImagePreview()
                 }
             }

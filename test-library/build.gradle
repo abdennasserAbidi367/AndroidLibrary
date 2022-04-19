@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
 }
@@ -8,7 +8,6 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.firstapp"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -32,6 +31,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+        useIR = true
     }
     buildFeatures {
         compose true
@@ -68,16 +68,25 @@ dependencies {
     implementation "androidx.compose.material:material-icons-extended:$compose_version"
 }
 
+/*
 afterEvaluate {
     publishing {
         publications {
-            release(MavenPublication) {
+            aar(MavenPublication) {
+                groupId = 'com.github.abdennasserAbidi367'
+                artifactId = 'AndroidLibrary'
+                version = '1.0'
+                artifact bundleReleaseAar
+            }
+            */
+/*release(MavenPublication) {
                 from components.release_apk
 
                 groupId = 'com.github.abdennasserAbidi367'
                 artifactId = 'AndroidLibrary'
                 version = '1.0'
-            }
+            }*//*
+
         }
     }
-}
+}*/
